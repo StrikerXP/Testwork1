@@ -19,6 +19,7 @@ specialization; minimal team size is 1, maximum up to 100; see template below
 the function should return the report object following the next template
 
 {
+
 totalBudgetTeam: 3398, // total salaries with tax of entire team; should be integer
 (truncate the fractional part after all calculations)
 
@@ -29,13 +30,21 @@ specialization; should be integer (truncate the fractional part after all calcul
 totalBudgetTester: 2222, // total salaries with tax for all members by 'Tester'
 
 specialization; should be integer (truncate the fractional part after all calculations)
+
 }
 
 See full example #1 below
+
 const salaries1 = {
+
 Manager: { salary: 1000, tax: "10%" },
+
 Designer: { salary: 600, tax: "30%" },
-Artist: { salary: 1500, tax: "15%" },}
+
+Artist: { salary: 1500, tax: "15%" },
+
+}
+
 const team1 = [
 { name: "Misha", specialization: "Manager" },
 { name: "Max", specialization: "Designer" },
