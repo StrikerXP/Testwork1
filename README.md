@@ -7,7 +7,7 @@ specialists has its own fixed salary after taxes and this tax rate. Accounting m
 the cost of the services for each specialty and the entire team. Your team leader has
 prepared a function template that will perform the task. You need to implement this function.
 Please note that some important hints are described in the comments to the code examples.
-
+Cancel changes
 function calculateTeamFinanceReport(salaries, team)
 
 where 'salaries' is an object with more information about salaries and taxes by specialist
