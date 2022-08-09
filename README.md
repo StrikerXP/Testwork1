@@ -14,7 +14,7 @@ where 'salaries' is an object with more information about salaries and taxes by 
 categories; minimum specializations amount is 1, maximum up to 10; 
 
 where 'team' is an array of objects represented by member of the team with name and
-specialization; minimal team size is 1, maximum up to 100; see template below
+specialization; minimal team size is 1, maximum up to 100;
 
 the function should return the report object following the next template
 
