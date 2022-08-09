@@ -1,4 +1,4 @@
-# Testwork1
+# Testwork - function for calculate Team Finance Report
 
 The accounting department turned to the IT department with a request to help with the
 financial report on the work of teams on the vendor side. It is known that the teams consist of
