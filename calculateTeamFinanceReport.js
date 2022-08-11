@@ -38,8 +38,6 @@ function calculateTeamFinanceReport(salaries, team) {
             }
         })
 
-    result//?
-
     return result//?
 }
 
