@@ -5,7 +5,7 @@ const salaries = {
     },
     Tester: {salary: 800, tax: '10%'},
     Designer: {salary: 600, tax: '30%'},
-    Artist: {salary: 1500, tax: '15%'}
+    Artist: {salary: 1500, tax: '15.9%'}
 };
 
 const team = [
@@ -29,16 +29,20 @@ function calculateTeamFinanceReport(salaries, team) {
     result['totalBudgetTeam'] = 0;
 
     team.filter(fromSalaries => proffNames.includes(fromSalaries.specialization))
-        .map(arrayElement => {
+        .forEach(arrayElement => {
             let specialization = arrayElement.specialization
+
             if (proffNames.includes(specialization)) {
-                let formula = Object.values(salaries[specialization]).reduce((prev, acc) => prev + (prev * parseInt(acc)) / 100);
+                let formula = Object.values(salaries[specialization])
+                    .reduce((prev, acc) =>
+                        //prev = salary as integer; acc = 'tax' is integer;
+                        prev + (prev * parseInt(acc)) / 100);
                 result[`totalBudget${specialization}`] = (result[`totalBudget${specialization}`] || 0) + formula;
                 result['totalBudgetTeam'] += result[`totalBudget${specialization}`];
             }
         })
 
-    return result//?.
+    return result//?
 }
 
 console.log(JSON.stringify(calculateTeamFinanceReport(salaries, team)))//?.
