@@ -42,7 +42,7 @@ function calculateTeamFinanceReport(salaries, team) {
             }
         })
 
-    return result//?
+    return result
 }
 
-console.log(JSON.stringify(calculateTeamFinanceReport(salaries, team)))//?.
+console.log(JSON.stringify(calculateTeamFinanceReport(salaries, team)))
