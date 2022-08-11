@@ -24,7 +24,7 @@ const team = [
 ];
 
 function calculateTeamFinanceReport(salaries, team) {
-    const proffNames = Object.keys(salaries);//?
+    const proffNames = Object.keys(salaries);
     let result = {};
     result['totalBudgetTeam'] = 0;
 
@@ -33,12 +33,12 @@ function calculateTeamFinanceReport(salaries, team) {
             let specialization = arrayElement.specialization
             if (proffNames.includes(specialization)) {
                 let formula = Object.values(salaries[specialization]).reduce((prev, acc) => prev + (prev * parseInt(acc)) / 100);
-                result[specialization] = (result[specialization] || 0) + formula;
-                result['totalBudgetTeam'] += result[specialization]//?
+                result[`totalBudget${specialization}`] = (result[`totalBudget${specialization}`] || 0) + formula;
+                result['totalBudgetTeam'] += result[`totalBudget${specialization}`];
             }
         })
 
-    return result//?
+    return result//?.
 }
 
-console.log(JSON.stringify(calculateTeamFinanceReport(salaries, team)))
+console.log(JSON.stringify(calculateTeamFinanceReport(salaries, team)))//?.
